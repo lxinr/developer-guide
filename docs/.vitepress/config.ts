@@ -8,7 +8,7 @@ export default defineConfig({
   lastUpdated: true,
   appearance: true, // 增加 DarkMode
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: 'https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/favicon.ico' }]
   ],
   themeConfig: {
     logo: '/my-logo.svg',
