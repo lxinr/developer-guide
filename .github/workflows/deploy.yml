@@ -11,7 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       # 用 pnpm 时会报错 Error: Unable to locate executable file ... 
-      # 解决办法 https://github.com/actions/setup-node/issues/530  https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#caching-packages-data
+      # 原因: 需要先安装pnpm -- It's an expected behaviour because pnpm should be preinstalled before the setup-node action. https://github.com/actions/setup-node/issues/530
+      # 解决办法: https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#caching-packages-data:~:text=Caching%20pnpm%20(v6.10%2B)%20dependencies%3A
       - uses: pnpm/action-setup@v2
         with:
           version: 7.6.0
