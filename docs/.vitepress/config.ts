@@ -40,9 +40,8 @@ export default defineConfig({
       text: '在 GitHub 中 编辑此页'
     },
     lastUpdatedText: '最近更新时间',
-    algolia: {
-
-    },
+    // algolia搜索
+    algolia: {}, 
     carbonAds: {
       code: 'your-carbon-code',
       placement: 'your-carbon-placement'

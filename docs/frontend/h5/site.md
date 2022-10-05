@@ -55,6 +55,7 @@ https://zhuanlan.zhihu.com/p/431930680
 - css的加载会阻塞后面js的执行；css加载不会阻塞DOM树的解析，但会阻塞Render树的渲染
 
 ### referrences
+*[浏览器已原生支持ES模块，这对前端开发来说意味着什么？](https://cloud.tencent.com/developer/article/1157519)
 
 *[浏览器渲染和服务器渲染区别 ](https://www.cnblogs.com/manshufeier/p/9357280.html)
 
