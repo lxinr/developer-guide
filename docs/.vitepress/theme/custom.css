@@ -84,9 +84,9 @@ code .line {
 @media (max-width: 768px) {
   .image-src {
     /* max-width: 184px !important; */
-    max-width: 222px !important;
+    max-width: 320px !important;
     /* top: 48% !important; */
-    top: 46% !important;
+    top: 41% !important;
     /* border-radius: 6px !important; */
   }
 }
