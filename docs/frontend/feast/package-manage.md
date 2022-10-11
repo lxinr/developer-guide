@@ -83,8 +83,6 @@ https://github.com/Pana/nrm/issues/111
 
 🚫nrm当前版本1.2.5有bug，先使用 `npm install -g @adams549659584/nrm`
 
-▶️`path` 新增 `C:\A\global-package\npm-global`，才能执行`nrm`等全局命令
-
 👍[关于执行策略 - PowerShell | Microsoft Docs](https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2)
 
 ```shell

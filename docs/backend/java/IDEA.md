@@ -52,6 +52,9 @@
 
 ![image-20220806144612483](https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/image-20220806144612483.png)
 
+调整为：
+![image-20221008145731454](https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/image-20221008145731454.png)
+
 ## 代码提示不区分大小写
 
 取消勾选 `Match Case`

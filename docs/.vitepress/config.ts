@@ -11,8 +11,11 @@ export default defineConfig({
     ['link', { rel: 'icon', href: 'https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/favicon.ico' }]
   ],
   themeConfig: {
-    logo: '/my-logo.svg',
-    siteTitle: 'Tech-hub', // 导航栏左侧指向起始页的标题
+    // logo: 'https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/logo_01.png',
+    logo: 'https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/RED-AssassinS.png',
+    // logo: 'https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/TEXT-AssassinS.png',
+    siteTitle: 'ASSASSINS CREED', // 导航栏左侧指向起始页的标题
+    // siteTitle: false, // 导航栏左侧指向起始页的标题
     nav: nav(),
     sidebar: {
       '/frontend/': sidebarFrontend(),

@@ -58,7 +58,8 @@ code .line {
 .VPNavBarTitle .title {
   font-family: 'PirataOne';
   font-size: 28px;
-  color: rgba(69, 205, 255, 1);
+  /* color: rgba(153, 44, 39, 1); */
+  color: rgb(137, 70, 62);
 }
 
 /* 顶部导航 左侧logo */
@@ -82,17 +83,21 @@ code .line {
 /* 起始页 标题右侧图片 docs/index.md/hero.image.src */
 @media (max-width: 768px) {
   .image-src {
-    max-width: 184px !important;
-    top: 48% !important;
-    border-radius: 6px !important;
+    /* max-width: 184px !important; */
+    max-width: 222px !important;
+    /* top: 48% !important; */
+    top: 46% !important;
+    /* border-radius: 6px !important; */
   }
 }
 
 @media (min-width: 960px) {
   .image-src {
-    max-width: 184px !important;
-    top: 70% !important;
-    border-radius: 6px !important;
+    /* max-width: 484px !important; */
+    max-width: 368px !important;
+    /* top: 70% !important; */
+    top: 50% !important;
+    /* border-radius: 6px !important; */
   }
 }
 
