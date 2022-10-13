@@ -27,6 +27,8 @@ $env:FNM_LOGLEVEL = "info"
 $env:FNM_NODE_DIST_MIRROR = "https://npm.taobao.org/dist"
 $env:FNM_ARCH = "x64"
 
+
+fnm list-remote --node-dist-mirror="https://npm.taobao.org/dist"
 # 下载node，仍然需要配置nodejs的环境变量: `C:\A\nodejs`
 fnm install v16.15.0  --node-dist-mirror="https://npm.taobao.org/dist"
 ```
@@ -104,6 +106,7 @@ npm config get registry
 corepack enable
 npm i -g pnpm
 which pnpm # Git Bash 中运行此命令
+pnpm root -g
 ```
 
 ### pnpm add -g pnpm 报错
@@ -145,15 +148,19 @@ C:\Users\klaus\AppData\Local\pnpm
 
 简而言之，如果[配置](https://pnpm.io/zh/configuring)了存储路径会有一系列麻烦，官方描述为[常见问题 | pnpm](https://pnpm.io/zh/faq#pnpm-%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E8%B7%A8%E5%A4%9A%E4%B8%AA%E9%A9%B1%E5%8A%A8%E5%99%A8%E6%88%96%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C)
 
-> 如果存储路径是通过 [https://pnpm.io/zh/configuring指定的，则存储与项目间的复制行为将会发生在不同的磁盘上。](https://pnpm.io/zh/configuring%E6%8C%87%E5%AE%9A%E7%9A%84%EF%BC%8C%E5%88%99%E5%AD%98%E5%82%A8%E4%B8%8E%E9%A1%B9%E7%9B%AE%E9%97%B4%E7%9A%84%E5%A4%8D%E5%88%B6%E8%A1%8C%E4%B8%BA%E5%B0%86%E4%BC%9A%E5%8F%91%E7%94%9F%E5%9C%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E7%A3%81%E7%9B%98%E4%B8%8A%E3%80%82)
+> [存储路径已指定](https://pnpm.io/zh/faq#%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E5%B7%B2%E6%8C%87%E5%AE%9A): 
+> 
+> 如果存储路径是通过[存储配置](https://pnpm.io/zh/configuring)指定的，则存储与项目间的复制行为将会发生在不同的磁盘上。
 > 
 > 如果您在磁盘 `A` 上执行 `pnpm install`，则 pnpm 存储必须位于磁盘 `A`。 如果 pnpm 存储位于磁盘 `B`，则所有需要的包将被直接复制到项目位置而不是链接。 这个严重的抑制了 pnpm 的存储和性能优势。
 
 所以我个人不建议[配置](https://pnpm.io/zh/configuring)存储路径，对此官方描述为：
 
+> [存储路径未指定](https://pnpm.io/zh/faq#%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84%E6%9C%AA%E6%8C%87%E5%AE%9A)：
+> 
 > 如果未设置存储路径，则会创建多个存储（每个驱动器或文件系统一个）。
 > 
-> 如果安装在磁盘 `A` 上运行，则存储将在 `A` 的文件系统根目录下的 `.pnpm-store` 下被创建。 如果稍后安装在磁盘 `B` 上运行，将会在 `B` 上的 `.pnpm-store`处创建一个独立的存储。 项目仍将保持 pnpm 的优势，但每个驱动器可能有冗余包。
+> 如果安装(pnpm install)在磁盘 `A` 上运行，则存储将在 `A` 的文件系统根目录下的 `.pnpm-store` 下被创建。 如果稍后安装在磁盘 `B` 上运行，将会在 `B` 上的 `.pnpm-store`处创建一个独立的存储。 项目仍将保持 pnpm 的优势，但每个驱动器可能有冗余包。
 
 ## npm
 

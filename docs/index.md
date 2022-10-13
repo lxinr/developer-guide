@@ -7,7 +7,8 @@ hero:
   tagline: 
   image:
     # src: /Kobe R.I.P.webp
-    src: https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/AssassinS%20CREED.png
+    # src: https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/AssassinS%20CREED.png
+    src: https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/AssassinS-1.png
     # src: https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/logo_01.png
     alt: Kobe R.I.P
   actions:

@@ -13,6 +13,7 @@ export default defineConfig({
   themeConfig: {
     // logo: 'https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/logo_01.png',
     logo: 'https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/RED-AssassinS.png',
+    // logo: 'https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/AssassinS-1.png',
     // logo: 'https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/TEXT-AssassinS.png',
     siteTitle: 'ASSASSINS CREED', // 导航栏左侧指向起始页的标题
     // siteTitle: false, // 导航栏左侧指向起始页的标题
