@@ -1,8 +1,8 @@
 # Let my path choose you
 
-#### [HOMEPAGE](/index.md)
+#### [HOMEPAGE](/index)
 
-#### [TYPESCRIPT](/frontend/feast/typescript.md)
+#### [TYPESCRIPT](/frontend/feast/typescript)
 
 ## all in all
 

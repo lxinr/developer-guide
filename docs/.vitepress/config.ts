@@ -21,7 +21,8 @@ export default defineConfig({
     sidebar: {
       '/frontend/': sidebarFrontend(),
       '/backend/': sidebarBackend(),
-      '/database/': sidebarDatabase()
+      '/database/': sidebarDatabase(),
+      '/network/': sidebarNetWork()
     },
     outline: 'deep', // 右侧大纲标题层级
     // outlineTitle: '本页大纲', // 右侧导航栏顶部文字 customize the title of the right sidebar (on the top of outline links)
@@ -45,7 +46,7 @@ export default defineConfig({
     },
     lastUpdatedText: '最近更新时间',
     // algolia搜索
-    algolia: {}, 
+    algolia: {},
     carbonAds: {
       code: 'your-carbon-code',
       placement: 'your-carbon-placement'
@@ -64,7 +65,7 @@ function nav() {
       text: 'Frontend',
       activeMatch: `^/frontend/`,
       items: [
-        { text: 'H5', link: '/frontend/h5/site' },
+        { text: 'Web', link: '/frontend/web/site' },
         {
           text: 'Feast',
           items: [
@@ -102,6 +103,13 @@ function nav() {
       items: [
         { text: 'MySQL', link: '/database/mysql' },
       ]
+    },
+    {
+      text: 'Network',
+      activeMatch: `^/network/`,
+      items: [
+        { text: 'Nginx', link: '/network/nginx' },
+      ]
     }
   ]
 }
@@ -109,11 +117,12 @@ function nav() {
 function sidebarFrontend() {
   return [
     {
-      text: 'H5',
+      text: 'Web',
       collapsible: true,
       items: [
-        { text: 'create a site', link: '/frontend/h5/site' },
-        { text: 'css', link: '/frontend/h5/css' }
+        { text: 'create a site', link: '/frontend/web/site' },
+        { text: 'css', link: '/frontend/web/css' },
+        { text: 'creative power', link: '/frontend/web/creativity' },
       ]
     },
     {
@@ -140,7 +149,7 @@ function sidebarFrontend() {
         { text: 'error', link: '/frontend/service/error' },
       ]
     },
-    
+
   ]
 }
 
@@ -182,6 +191,18 @@ function sidebarDatabase() {
       collapsible: true,
       items: [
         { text: 'mysql', link: '/database/mysql' },
+      ]
+    }
+  ]
+}
+
+function sidebarNetWork() {
+  return [
+    {
+      text: 'Network',
+      collapsible: true,
+      items: [
+        { text: 'nginx', link: '/network/nginx' },
       ]
     }
   ]

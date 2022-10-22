@@ -107,15 +107,23 @@ corepack enable
 npm i -g pnpm
 which pnpm # Git Bash 中运行此命令
 pnpm root -g
+pnpm store path # 返回活跃的存储目录的路径
+pnpm store prune # 从存储中删除未引用的包
+pnpm view @slidev/cli versions # If you need the full list of all published versions
 ```
 
-### pnpm add -g pnpm 报错
+### pnpm add -g [x] 报错
+::: danger ERR_PNPM_REGISTRIES_MISMATCH
+This modules directory was created using the following registries configuration: {"default":"https://registry.npmjs.org/"}. The current configuration is {"default":"https://registry.npmmirror.com/"}. To recreate the modules directory using the new settings, run "pnpm install".
+:::
 
+解决：`pnpm install -g` `pnpm install -g pnpm`，最好新建项目时`pnpm i`使用哪个registry，之后`pnpm add`就用哪个源。
+
+
+### pnpm add -g pnpm 报错
 ::: danger 在 C 盘目录下执行时
  ERROR  The configured global bin directory "C:\Users\klaus\AppData\Local\pnpm" is not in PATH
-
 > Run `pnpm setup` to create it automatically, or set the global-bin-dir setting, or the PNPM_HOME env variable. The global bin directory should be in the PATH.
-
 :::
 
 ::: danger  在 D 盘目录下执行时
@@ -133,10 +141,6 @@ C:\Users\klaus\AppData\Local\pnpm
 # 添加到 path 中
 %PNPM_HOME%
 ```
-
-### pnpm add 报错
-
-另外，`pnpm -v 7.9.5`新建项目时`pnpm i`使用的哪个源（`npm` `taobao`），之后`pnpm add`就用哪个源，**否则会报registry相关的错**
 
 ### Error: spawn pnpm ENOENT
 

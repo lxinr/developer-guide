@@ -4,10 +4,10 @@
    * -------------------------------------------------------------------------- */
 
   /* 控制顶部导航栏 hover 导航线条颜色 */
-  --vp-c-brand-dark: rgba(255, 144, 172, 1);
+  --vp-c-brand-dark: rgba(172, 74, 246, 1);
 
   /* 控制右侧导航栏 a链接 导航线条颜色 */
-  --vp-c-brand: rgba(69, 205, 255, 1);
+  --vp-c-brand: #7bc7d1;
 
   /**
    * Component: Home
@@ -138,9 +138,9 @@ code .line {
   font-family: 'Quicksand', 'SourceHanSerifCN';
 }
 
-/* 右侧链接 hover时导航线条颜色 */
+/* a链接 hover时导航线条颜色 */
 .vp-doc a:hover {
-  color: rgba(113, 207, 252, 1);
+  color: #7f493f;
 }
 
 @font-face {

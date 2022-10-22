@@ -22,13 +22,16 @@ hero:
 features:
   - icon: ⚡️ 
     title: Frontend
-    details: TypeScript & Vue & React & Angular ...
-  - icon: 🖖
+    details: TS & Vue & React & Angular ...
+  - icon: ♨️
     title: Backend
-    details: Java & Rust & Node & Containers ...
+    details: Java & Rust & Node ...
   - icon: 🛠️
     title: Data Analysis
     details: MySQL & GraphQL & NoSQL ...
+  - icon: 🌐
+    title: Network
+    details: A Hacker
 ---
 
 <style>

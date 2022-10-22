@@ -65,9 +65,6 @@ ranger --copy-config=all # Ranger can automatically copy default configuration f
 ### 搭配nvim
 
 #### 修改默认编辑器
-```bash
-
-```
 `cd ~/.config/ranger/rifle.conf`，把 `${VISUAL:-$EDITOR}` 改成 `nvim`，[将ranger的默认编辑器配置成neovim_zmhzmhzm的博客-CSDN博客_ranger 默认编辑器](https://blog.csdn.net/zmhzmhzm/article/details/106765480)
 
 ```bash

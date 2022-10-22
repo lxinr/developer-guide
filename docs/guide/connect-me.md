@@ -12,4 +12,4 @@ aside: false
 ### `klau.lover@gmail.com`
 
 ## WeChat
-![wechat](/wechat.jpg#pic_center){width="400px"}
+![wechat](/wechat.jpg#pic_center){width="23px"}
