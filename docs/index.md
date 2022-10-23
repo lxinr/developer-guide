@@ -4,7 +4,7 @@ layout: home
 hero:
   name: Full Stack Engineer Developer & Programmer # product name
   text: 
-  tagline: 
+  tagline:
   image:
     # src: /Kobe R.I.P.webp
     # src: https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/AssassinS%20CREED.png
