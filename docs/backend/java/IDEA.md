@@ -17,7 +17,7 @@
 
 1. 创建 test 目录
    
-   Windows下 `tree` 命令，[tree | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/tree)
+   Windows下 `tree` 命令，`tree` `tree /f` `tree /?`，[tree | Microsoft Learn](https://learn.microsoft.com/zh-cn/windows-server/administration/windows-commands/tree)
    
    ```powershell
    $ tree /f
@@ -96,4 +96,20 @@ public class ${NAME} {}
  * @author 刘仁钦
  * @date $date$ $time$
  */
+```
+
+## 启动报错
+
+```java
+Internal error. Please refer to https://jb.gg/ide/critical-startup-errors
+
+com.intellij.ide.plugins.StartupAbortedException: Cannot start app
+                                                               ...
+```
+
+**solution**: A restart of Windows NAT worked for me. Open Windows PowerShell in Administration mode, & type these commands:
+
+```powershell
+net stop winnat 
+net start winnat
 ```

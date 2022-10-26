@@ -117,7 +117,7 @@ pnpm view @slidev/cli versions # If you need the full list of all published vers
 This modules directory was created using the following registries configuration: {"default":"https://registry.npmjs.org/"}. The current configuration is {"default":"https://registry.npmmirror.com/"}. To recreate the modules directory using the new settings, run "pnpm install".
 :::
 
-解决：`pnpm install -g` `pnpm install -g pnpm`，最好新建项目时`pnpm i`使用哪个registry，之后`pnpm add`就用哪个源。
+解决：`pnpm install -g`，最好新建项目时`pnpm i`使用哪个registry，之后`pnpm add`就用哪个源。
 
 
 ### pnpm add -g pnpm 报错

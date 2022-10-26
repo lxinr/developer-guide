@@ -147,9 +147,9 @@ function sidebarFrontend() {
       collapsible: true,
       items: [
         { text: 'error', link: '/frontend/service/error' },
+        { text: '业务代码', link: '/frontend/service/useful' }
       ]
     },
-
   ]
 }
 
