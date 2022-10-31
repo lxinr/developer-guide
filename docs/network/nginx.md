@@ -7,8 +7,6 @@ titleTemplate: 反向代理
 
 ## Quick Start
 
-<iframe src="//player.bilibili.com/player.html?aid=680452541&bvid=BV18S4y1T7Gv&cid=478784385&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
 ppt资料请转至[About Me](/guide/connect-me#email)发送邮件获取
 
 ## Nginx简介
@@ -69,6 +67,202 @@ nginx -s quit # 完整有序的停止
 - 保护内网安全：反向代理隐藏了真实的服务器信息
 
 - 缓存服务器信息，减少服务器的压力
+
+### nginx.conf
+
+```nginx
+#user root;
+#worker_processes 1
+
+error_log logs/error.log;
+error_log logs/error.log notice;
+error_log logs/error.log info;
+
+events {
+    worker_connections 1024;
+}
+
+
+http {
+    include mime.types;
+    default_type application/octet-stream;
+                
+    log_format main '$remote_addr - $remote_user [$time_local] "$request" '
+                    '$status $body_bytes_sent "$http_referer" '
+                    '"$http_user_agent" "$http_x_forwarded_for"';
+
+    access_log logs/access.log main;
+
+    sendfile on;
+    #tcp_nopush     on;
+
+    #keepalive_timeout  0;
+    keepalive_timeout  65;
+
+    # gzip  on;
+
+    include myvhost/*.conf;
+
+    server {
+
+        listen       80;
+        server_name  localhost;
+        charset      utf-8;
+
+        location / {
+            root   html;
+            index  index.html index.htm;
+        }
+
+    }
+
+}
+```
+
+### include myvhost/8888.conf;
+
+```nginx
+server {
+
+    listen 8888;
+    server_name localhost;
+
+    location / {
+        proxy_pass http://www.baidu.com;
+    }
+
+}
+```
+
+## 负载均衡
+
+将nginx用于反向代理服务器，将客户端的请求分发到(后端)多个(Tomcat)服务器上，从而提高服务器的并发能力，达到负载均衡的目的。
+
+### server [parameters]
+
+![](https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/1666627598851.png)
+
+### 分配策略
+
+`none（轮询）` `weight（权重）` `ip_hash（访问ip）` `fair（响应时间）`
+
+![](https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/1666601444021.png)
+
+### include myvhost/upstream.conf
+
+有问题，待验证
+
+```nginx
+# 语法： upstream name { server address [parameters];...}
+
+upstream multi_host {
+	server baidu.com max_fails=0;
+}
+
+server {
+
+	listen		10081;
+	server_name	localhost;
+
+	location / {
+	    proxy_buffer_size 64k;
+        proxy_buffers 32 32k;
+        proxy_busy_buffers_size 128k;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP       $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_http_version 1.1;
+		proxy_pass http://multi_host;
+	}
+
+}
+```
+
+## 动静分离
+
+```powershell
+$ tree
+├─conf
+│  └─myvhost # 自定义文件夹
+├─contrib
+├─docs
+├─html
+├─logs
+├─my_images_host # 自定义文件夹
+└─temp
+```
+
+### alias
+
+`localhost:9999/static` `localhost:9999/static/nice.png`
+
+```nginx
+server {
+
+	listen 9999;
+	server_name localhost;	
+
+	location /static/ {
+
+		# 请求地址 localhost:9999/static/nice.png
+		# nginx会转化为C:/A/nginx/my_images_host/nice.png
+		# 可以看出alias是把location后面的/static/去掉，拼接到alias后面
+		alias C:/A/nginx/my_images_host/;
+		autoindex on;
+
+	}
+    
+}
+```
+
+### root
+
+```nginx
+server {
+
+	listen 9999;
+	server_name localhost;	
+
+	location /static/ {
+
+		# 请求地址 localhost:9999/static/l.png
+		# nginx会转化为C:/A/nginx/my_images_host/static/l.png
+		# 可以看出root是把location直接拼接到root后面
+		root C:/A/nginx/my_images_host/;
+		autoindex on;
+
+	}
+	
+}
+```
+
+### 🈂️
+
+```nginx
+server {
+
+	listen 9999;
+	server_name localhost;
+
+    # 存放静态文件的文件目录，linux下应该需要加 /，形如/xxx/xxx;
+    # root my_images_host;  
+
+    location / {
+		root html;
+		index index.html;
+	}
+
+    # location /static/
+	location /static {
+        # 等同 root C:/A/nginx/my_images_host/;
+        # root可以配置到外边
+		root my_images_host;
+		autoindex on;
+	}
+	
+}
+```
+
 
 
 ## 502 Bad Gateway
