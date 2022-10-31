@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as n,b as s}from"./app.c40db24e.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"network/nginx.md","lastUpdated":1667225291000}'),a={name:"network/nginx.md"},o=s("p",null,"ss",-1),r=[o];function c(_,d,i,p,l,m){return t(),n("div",null,r)}const x=e(a,[["render",c]]);export{u as __pageData,x as default};

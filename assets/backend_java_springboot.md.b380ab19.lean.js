@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as a}from"./app.c40db24e.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"backend/java/springboot.md","lastUpdated":1667225291000}'),o={name:"backend/java/springboot.md"};function r(n,s,c,p,d,i){return e(),a("div")}const f=t(o,[["render",r]]);export{m as __pageData,f as default};
