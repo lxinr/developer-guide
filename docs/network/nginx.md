@@ -7,7 +7,7 @@ titleTemplate: 反向代理
 
 ## Quick Start
 
-<!-- <iframe src="//player.bilibili.com/player.html?aid=680452541&bvid=BV18S4y1T7Gv&cid=478784385&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe> -->
+<iframe src="//player.bilibili.com/player.html?aid=680452541&bvid=BV18S4y1T7Gv&cid=478784385&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 ppt资料请转至[About Me](/guide/connect-me#email)发送邮件获取
 
@@ -196,7 +196,7 @@ $ tree
 
 ### alias
 
-`localhost:9999/static` `localhost:9999/static/nice.png`
+<!-- `localhost:9999/static` `localhost:9999/static/nice.png` -->
 
 ```nginx
 server {
@@ -264,8 +264,6 @@ server {
 	
 }
 ```
-
-
 
 ## 502 Bad Gateway
 
