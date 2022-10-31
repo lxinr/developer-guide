@@ -14,9 +14,7 @@ getParameterByName(name) {
 getParameterByName('id')
 ```
 
-## 插件
-
-### postcss-px-to-viewport
+## postcss-px-to-viewport
 
 ```js
 mediaQuery: true,
