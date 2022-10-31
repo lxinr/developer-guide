@@ -170,6 +170,7 @@ function sidebarBackend() {
       collapsible: true,
       items: [
         { text: '基础', link: '/backend/container/Linux' },
+        { text: 'vim', link: '/backend/container/vim' },
         {
           text: 'Containers',
           collapsible: true,

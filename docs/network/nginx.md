@@ -1,3 +1,8 @@
+---
+title: Nginx
+titleTemplate: 反向代理
+---
+
 # Nginx
 
 ## Quick Start

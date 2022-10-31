@@ -1,10 +1,15 @@
 ---
 title: TypeScript
 titleTemplate: 语法
-outline: deep
 ---
 
 # TypeScript
+
+## To Learn
+
+https://learntypescript.dev
+
+
 
 ## 类型
 
