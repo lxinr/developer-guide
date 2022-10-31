@@ -70,7 +70,7 @@ nginx -s quit # 完整有序的停止
 
 - 缓存服务器信息，减少服务器的压力
 
-### nginx.conf
+<!-- ### nginx.conf
 
 ```nginx
 #user root;
@@ -264,7 +264,7 @@ server {
     }
     
 }
-```
+``` -->
 
 ## 502 Bad Gateway
 
