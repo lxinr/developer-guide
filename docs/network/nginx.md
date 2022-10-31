@@ -5,7 +5,7 @@ titleTemplate: 反向代理
 
 # Nginx
 
-## Quick Start
+<!-- ## Quick Start
 
 <iframe src="//player.bilibili.com/player.html?aid=680452541&bvid=BV18S4y1T7Gv&cid=478784385&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
@@ -196,7 +196,7 @@ $ tree
 
 ### alias
 
-<!-- `localhost:9999/static` `localhost:9999/static/nice.png` -->
+`localhost:9999/static` `localhost:9999/static/nice.png`
 
 ```nginx
 server {
@@ -267,4 +267,4 @@ server {
 
 ## 502 Bad Gateway
 
-[How to Solve 502 Bad Gateway Issues? - KeyCDN Support](https://www.keycdn.com/support/502-bad-gateway)
+[How to Solve 502 Bad Gateway Issues? - KeyCDN Support](https://www.keycdn.com/support/502-bad-gateway) -->
