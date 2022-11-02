@@ -9,7 +9,25 @@ titleTemplate: 语法
 
 https://learntypescript.dev
 
+> TypeScript brings many benefits when using it to develop apps, including:
+> - Sophisticated type checking.
+> - Accurate intellisense.
+> - Accurate code refactoring.
+> - Accurate code navigation.
 
+## Q&A
+
+1. TypeScript type checks our code, but when can this type checking process take place?
+
+   <strong style="color:green;">☑</strong> Whilst we write our code
+
+   <strong style="color:green;">☑</strong> During the projects build process
+
+   <strong style="color:red;">☒</strong> At runtime
+
+   > Code editors can use TypeScript to type check our code whilst it is  being written. TypeScripts type checker can be invoked during the build  process. TypeScript doesn’t exist at runtime.
+
+<hr>
 
 ## 类型
 

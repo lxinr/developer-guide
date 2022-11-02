@@ -28,3 +28,5 @@ const members = [
 ## [Pinia](https://pinia.vuejs.org/)
 
 ## [VitePress](https://vitepress.vuejs.org/)
+
+## [Volar Takeover Mode](https://vuejs.org/guide/typescript/overview.html#volar-takeover-mode)
