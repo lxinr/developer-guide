@@ -3,9 +3,96 @@ title: TypeScript
 titleTemplate: 语法
 ---
 
+# JavaScript
+
+## JavaScript is loosely typed
+
+```javascript
+let amount = 10
+amount = "Eight"
+```
+
+## JavaScript
+
+### modules
+
+What type of modules does your project use? ...
+- JavaScript modules (import/export)
+- CommonJS (require/exports)
+
+### data types
+
+https://developer.mozilla.org/docs/Web/JavaScript/Data_structures#objects
+
+### null
+
+> Notice that the type of a null variable is <strong style="color:green;">**object**</strong> and not null as we would expect. <strong style="color:#c04851;">**This is a bug in JavaScript!**</strong> [This link](https://2ality.com/2013/10/typeof-null.html) gives more details of this bug.
+
+### || 逻辑或
+
+由于 `||` 是一个布尔逻辑运算符，左侧的操作数会被强制转换成布尔值用于求值。任何假值（`0`， `''`， `NaN`， `null`， `undefined`）都不会被返回。这导致如果你使用`0`，`''`或`NaN`作为有效值，就会出现不可预料的后果
+
+```javascript
+let count = 0;
+let text = "";
+
+let qty = count || 42;
+let message = text || "hi!";
+console.log(qty);     // 42，而不是 0
+console.log(message); // "hi!"，而不是 ""
+```
+
+### ?? 空值合并运算符
+
+https://developer.mozilla.org/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
+
+空值合并运算符可以避免上述`||`陷阱，当左表达式不为 `null` 或 `undefined` 时，不会对右表达式进行求值，其只在第一个操作数为`null` 或 `undefined` 时（而不是其它假值）返回第二个操作数。
+
+```javascript
+let myText = ''; // An empty string (which is also a falsy value)
+
+let notFalsyText = myText || 'Hello world';
+console.log(notFalsyText); // Hello world
+
+let preservingFalsy = myText ?? 'Hi neighborhood';
+console.log(preservingFalsy); // '' (as myText is neither undefined nor null)
+```
+
+## Compare With Ts
+
+- JS中不要求调用函数时传递所有已定义参数，但TS中默认要求参数全部传递，非必选参数用`?`标识[^1]，要注意非必选参数必须在参数列表末尾，<strong style="color:red;">注意以下情形：</strong>
+
+  ```typescript
+  
+  function add(a: number, b?: number): number {
+    return a + b; // Object is possibly 'undefined'.
+  }
+  
+  add(1, undefined)
+  
+  // 处理
+  function add(a: number, b?: number): number {
+    return a + (b || 0);
+  }
+  
+  // 推荐处理  nullish coalescing operator 空值合并运算符
+  function add(a: number, b?: number): number {
+    return a ?? b;
+  }
+  ```
+
+  
+
+  [^1]:In JavaScript, there is no type checking process requiring function callers to pass all the defined parameters.
+
+---
+
+---
+
+
 # TypeScript
 
-## To Learn
+## Start TS Journey
 
 https://learntypescript.dev
 
@@ -14,6 +101,13 @@ https://learntypescript.dev
 > - Accurate intellisense.
 > - Accurate code refactoring.
 > - Accurate code navigation.
+
+## VS Code & ESLint
+
+1. vscode上安装了`ESLint`插件，并在项目中或全局安装了`pnpm add -g eslint`包
+2. `pnpm init` & `eslint --init`，按提示选择自己想要的配置
+3. 一般情况下，你可能需要<strong style="color:green;">重启vscode</strong>才可以使eslint的校验生效
+
 
 ## Q&A
 
@@ -26,8 +120,6 @@ https://learntypescript.dev
    <strong style="color:red;">☒</strong> At runtime
 
    > Code editors can use TypeScript to type check our code whilst it is  being written. TypeScripts type checker can be invoked during the build  process. TypeScript doesn’t exist at runtime.
-
-<hr>
 
 ## 类型
 
@@ -257,3 +349,6 @@ let tuple = pairToTuple({ item1: 'hello', item2: 'world' })
 ```ts
 <reference path='jquery.d.ts' />
 ```
+
+
+

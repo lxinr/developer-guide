@@ -1,3 +1,4 @@
+import footnote from 'markdown-it-footnote'
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
@@ -10,6 +11,11 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: 'https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/favicon.ico' }]
   ],
+  markdown: {
+    config: (md) => {
+      md.use(footnote)
+    }
+  },
   themeConfig: {
     // logo: 'https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/logo_01.png',
     logo: 'https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/RED-AssassinS.png',
@@ -130,7 +136,8 @@ function sidebarFrontend() {
       collapsible: true,
       items: [
         { text: 'typescript', link: '/frontend/feast/typescript' },
-        { text: 'package manager', link: '/frontend/feast/package-manage' }
+        { text: 'package manager', link: '/frontend/feast/package-manage' },
+        { text: 'plugins', link: '/frontend/feast/plugins' }
       ]
     },
     {
