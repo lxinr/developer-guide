@@ -102,6 +102,7 @@ https://learntypescript.dev
 > - Accurate code refactoring.
 > - Accurate code navigation.
 
+
 ## VS Code & ESLint
 
 1. vscode上安装了`ESLint`插件，并在项目中或全局安装了`pnpm add -g eslint`包
@@ -120,6 +121,25 @@ https://learntypescript.dev
    <strong style="color:red;">☒</strong> At runtime
 
    > Code editors can use TypeScript to type check our code whilst it is  being written. TypeScripts type checker can be invoked during the build  process. TypeScript doesn’t exist at runtime.
+
+## 类型推断 type inference
+
+TypeScript can automatically infer the type of a variable from the value it is assigned.
+
+### Date
+
+TypeScript has inferred the type to be `Date`. We know from earlier that `Date` is not a type in JavaScript, so this is a TypeScript specific type. TypeScript can infer types that don't exist in JavaScript.
+
+```typescript
+// TS会把dateOfBirth类型推断为Date，但是我们知道JS中并没有Date这个类型，Date在JS中是object
+let dateOfBirth = new Date(1990, 4, 7);
+```
+
+
+
+---
+
+---
 
 ## 类型
 
