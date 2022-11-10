@@ -148,13 +148,54 @@ vite项目ts校验会报 <strong style="color:red;">Cannot find name 'ref'</stro
   ],
 ```
 
-`
-
-### unplugin-vue-components
+### [unplugin-vue-components](https://github.com/antfu/unplugin-vue-components#readme)
 
 **安装：**`pnpm add unplugin-vue-components -D`
 
 #### vite.config.ts
+
+可以直接使用组件而无需导入，~~import HelloWorld from './src/components/HelloWorld.vue'~~
+
+> By default this plugin will import components in the `src/components` path. You can customize it using the `dirs` option
+
+It will automatically turn this
+
+```vue
+<template>
+  <div>
+    <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'App'
+}
+</script>
+```
+
+into this
+
+```vue
+<template>
+  <div>
+    <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  </div>
+</template>
+
+<script>
+import HelloWorld from './src/components/HelloWorld.vue'
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  }
+}
+</script>
+```
+
+另外，主流的vue组件库也可以在简要配置后直接使用无需手动注册
 
 ```typescript
 import Components from 'unplugin-vue-components/vite'
