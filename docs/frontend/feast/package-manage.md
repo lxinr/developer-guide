@@ -15,6 +15,12 @@ pnpm和npm用的同一个配置文件.npmrc，https://pnpm.io/cli/config
 
 > Fast Node Manager , [Fast and simple Node.js version manager, built in Rust](https://github.com/Schniz/fnm)
 
+### Linux
+
+安装`curl -fsSL https://fnm.vercel.app/install | bash`
+
+### Windows
+
 [nodejs版本管理工具fnm - 掘金 (juejin.cn)](https://juejin.cn/post/7047120772032102407)
 
 ```powershell

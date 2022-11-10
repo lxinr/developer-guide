@@ -22,6 +22,8 @@ What type of modules does your project use? ...
 
 ### data types
 
+> JavaScript does have `string,` `number`, and `boolean` types, but there is no specific `date` type - instead, dates are of type `object`.
+
 https://developer.mozilla.org/docs/Web/JavaScript/Data_structures#objects
 
 ### null
@@ -135,7 +137,15 @@ TypeScript has inferred the type to be `Date`. We know from earlier that `Date` 
 let dateOfBirth = new Date(1990, 4, 7);
 ```
 
+### const 常量
 
+鼠标放在firstName上，TS会提示`Bob`，而不是`string`
+
+```typescript
+const firstName = "Bob";
+```
+
+TypeScript infers the type of a `string` constant to the value of the constant rather than the wider `string` type. This is because a string constant can only be that value. This is called a **string literal type**.
 
 ---
 

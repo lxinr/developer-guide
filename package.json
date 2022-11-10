@@ -17,7 +17,7 @@
     "markdown-it": "^13.0.1",
     "sass": "^1.53.0",
     "vite": "^3.1.4",
-    "vitepress": "1.0.0-alpha.27",
+    "vitepress": "1.0.0-alpha.28",
     "vitepress-plugin-search": "1.0.4-alpha.11",
     "vue": "^3.2.37"
   },

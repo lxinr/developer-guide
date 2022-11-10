@@ -8,6 +8,12 @@ https://podman.io/
 
 > Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.
 
+## command
+
+### run
+
+https://www.runoob.com/docker/docker-run-command.html
+
 ## Podman for Debian（WSL2）
 
 Ubuntu基于Debian，都可使用`apt-get`
@@ -114,7 +120,7 @@ podman pull docker.io/redis/redis-stack
 podman pull redis/redis-stack
 ```
 
-- `-d`：后台运行容器，并返回容器ID，否则关掉shell容器就停了；`--name redis-stack` 和 最后的`redis/redis-stack:latest`可以理解为对象和类的关系，类可以创建无数个对象
+- `-d`：后台运行容器，并返回容器ID，否则关掉shell容器就停了；`--name redis-stack`和最后的`redis/redis-stack:latest`可以理解为对象和类的关系，类可以创建无数个对象 ———— 使用镜像`redis/redis-stack:latest`以后台模式启动一个容器,并将容器命名为`redis-stack`
 
 ```bash
 podman run -d --name redis-stack -p 6379:6379 -p 8001:8001 -v ~/mypod/redis/conf/local-redis-stack.conf:/redis-stack.conf -v ~/mypod/redis/data:/data -e REDIS_ARGS="--requirepass 12345" -e REDIS_ARGS="--appendonly yes" redis/redis-stack:latest
