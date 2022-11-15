@@ -54,6 +54,10 @@ https://zhuanlan.zhihu.com/p/431930680
 
 - css的加载会阻塞后面js的执行；css加载不会阻塞DOM树的解析，但会阻塞Render树的渲染
 
+- **重排一定会触发重绘，重绘不一定会触发重排**
+
+  ![image-20221115230041467](https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/image-20221115230041467.png)
+
 ### referrences
 *[浏览器已原生支持ES模块，这对前端开发来说意味着什么？](https://cloud.tencent.com/developer/article/1157519)
 
@@ -66,3 +70,4 @@ https://zhuanlan.zhihu.com/p/431930680
 [浏览器DOM渲染及阻塞问题](https://www.cnblogs.com/liuarui/p/11393297.html)
 
 [html，css在浏览器渲染渲染原理 ](https://zhuanlan.zhihu.com/p/93468794)
+

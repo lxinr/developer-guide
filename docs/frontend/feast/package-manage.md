@@ -113,6 +113,10 @@ nrm current  # 当前使用的源
 npm config get registry
 ```
 
+## [cgr](https://github.com/daysai/cgr)
+
+> npm，yarn源管理
+
 ## pnpm
 
 > Performant NPM , https://pnpm.io/
