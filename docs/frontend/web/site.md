@@ -58,6 +58,18 @@ https://zhuanlan.zhihu.com/p/431930680
 
   ![image-20221115230041467](https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/image-20221115230041467.png)
 
+### 触发重排
+
+- 页面首次渲染
+- 浏览器窗口大小变化
+- 元素尺寸、位置、内容、字体大小发生变化
+- 添加或删除可见的元素
+- 激活伪类时
+
+### 触发重绘
+
+- 改变元素颜色、背景、visibility、outline等属性
+
 ### referrences
 *[浏览器已原生支持ES模块，这对前端开发来说意味着什么？](https://cloud.tencent.com/developer/article/1157519)
 
