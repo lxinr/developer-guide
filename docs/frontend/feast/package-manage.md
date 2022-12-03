@@ -15,6 +15,18 @@ pnpm和npm用的同一个配置文件.npmrc，https://pnpm.io/cli/config
 
 > Fast Node Manager , [Fast and simple Node.js version manager, built in Rust](https://github.com/Schniz/fnm)
 
+注意：使用fnm之前需要配置相关的环境变量，详见 [Shell Setup](https://github.com/Schniz/fnm#shell-setup)
+
+### Mac
+
+```shell
+brew install fnm
+vim .zshrc (~/.zshrc)
+// 添加
+eval "$(fnm env --use-on-cd)"
+:wq
+```
+
 ### Linux
 
 安装`curl -fsSL https://fnm.vercel.app/install | bash`
@@ -69,7 +81,7 @@ fnm current
 node_mirror: https://npm.taobao.org/mirrors/node/ # nvm下载node的源地址
 npm_mirror: https://npm.taobao.org/mirrors/npm/ # Defaults to https://github.com/npm/cli/archive/，指node下载npm时的镜像，是控制npm的版本，不是npm下载包的镜像
 # command
-nvm v    # version
+nvm -v    # version
 nvm ls    # list [available] 列出当前已安装的所有版本
 nvm ls available # windows版本,列出全部可以安装的node版本
 nvm install latest # 安装最新版本node.js
@@ -116,6 +128,26 @@ npm config get registry
 ## [cgr](https://github.com/daysai/cgr)
 
 > npm，yarn源管理
+
+```powershell
+Usage: cgr [options] [command]
+
+  Commands:
+
+    ls                           List all the registries
+    use <registry> [type]        Change registry to registry
+    add <registry> <url> [home]  Add one custom registry
+    del <registry>               Delete one custom registry
+    test [registry]              Show the response time for one or all registries
+    on [type]                    Enable pnpm or other type
+    off [type]                   Disable pnpm or other type
+    help                         Print this help
+
+  Options:
+
+    -h, --help     output usage information
+    -V, --version  output the version number
+```
 
 ## pnpm
 
