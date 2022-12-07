@@ -1,7 +1,6 @@
 ---
 aside: false
 ---
-
 <script setup>
 import { VPTeamMembers } from 'vitepress/theme'
 import AboutMe from '../components/AboutMe.vue'
@@ -28,10 +27,8 @@ const members = [
 
 <VPTeamMembers size="small" :members="members" />
 
-「如果尖銳的批評完全消失，溫和的批評將會變得刺耳。如果溫和的批評也不被允許，沈默將被認為居心叵測。如果沈默也不再允許，贊揚不夠賣力將是一種罪行。如果只允許一種聲音存在，那麼，唯一存在的那個聲音就是謊言。」
+~「如果尖銳的批評完全消失，溫和的批評將會變得刺耳。如果溫和的批評也不被允許，沈默將被認為居心叵測。如果沈默也不再允許，贊揚不夠賣力將是一種罪行。如果只允許一種聲音存在，那麼，唯一存在的那個聲音就是謊言。」~
 
-##
 <AboutMe />
-
 
 <style lang="scss"></style>
