@@ -1,7 +1,10 @@
-import { SearchPlugin } from 'vitepress-plugin-search';
+//vite.config.ts
 import { defineConfig } from "vite";
+import { SearchPlugin } from "vitepress-plugin-search";
 
-	
 export default defineConfig({
-	plugins: [SearchPlugin()]
+  plugins: [SearchPlugin({
+    encode: false,
+    tokenize: "full"
+  })],
 });

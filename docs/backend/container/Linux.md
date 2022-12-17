@@ -44,7 +44,7 @@ cat ~/.ssh/huaweiyun_id_rsa.pub >> ~/.ssh/authorized_keys
 # 华为云
 # hwc is name-alias
 Host hwc
-  HostName 120.46.139.94
+  HostName xxx.xxx.xxx.xx
   User klaus
   IdentityFile ~/.ssh/huaweiyun_id_rsa
   LocalForward localhost:5173 localhost:5173
