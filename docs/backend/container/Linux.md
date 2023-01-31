@@ -4,7 +4,7 @@
 
 就是把公钥放在要连接的服务器端，私钥在请求端进行匹配
 
-前面的步骤一致，生成 `rsa` 密钥对：
+前面的步骤一致，生成 `rsa` 密钥对，在 `~/.ssh` 目录下进行：
 
 ```shell
 # RSA也是默认的加密类型．所以你也可以只输入ssh-keygen
@@ -27,7 +27,7 @@ ssh-keygen
 #### 第二步：将公钥文件通过scp的方式上传到远程服务器上
 
 ```powershell
-scp C:\Users\你的用户名\.ssh\huaweiyun_id_rsa.pub klaus@xxx.xxx.xxx.xxx:~/.ssh
+scp C:\Users\你的用户名\.ssh\hwc_win_id_rsa.pub klaus@120.46.139.**:~/.ssh
 ```
 
 #### 第三步：登录远程服务器，终端输入
@@ -35,18 +35,19 @@ scp C:\Users\你的用户名\.ssh\huaweiyun_id_rsa.pub klaus@xxx.xxx.xxx.xxx:~/.
 ```powershell
 # >> 是在文件内容后面追加新内容，即追加重定向
 # > 是清空并添加新内容，即重定向
-cat ~/.ssh/huaweiyun_id_rsa.pub >> ~/.ssh/authorized_keys
+cat ~/.ssh/hwc_win_id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 
 #### 第四步：windows用户目录下，~/.ssh/config，同Linux
 
 ```powershell
 # 华为云
+# 偶现：LocalForward 开启后导致ssh连接远程服务器报错 channel 3: open failed: connect failed: Connection refused，关闭后正常
 # hwc is name-alias
 Host hwc
   HostName xxx.xxx.xxx.xx
   User klaus
-  IdentityFile ~/.ssh/huaweiyun_id_rsa
+  IdentityFile ~/.ssh/hwc_win_id_rsa
   LocalForward localhost:5173 localhost:5173
 
 # gitee
@@ -74,10 +75,9 @@ Host github.com
 git config --global user.name "刘仁钦"
 git config --global user.email  "klau.lover@gmail.com"
 cd ~/.ssh
-ssh-keygen -t rsa -C "klau.lover@gmail.com"
-# ssh-copy-id -i [公钥文件] user@host
+ssh-keygen -t rsa -C "hwc_github_id_rsa"
 cat id_rsa.pub
-复制到Github对应的配置SSH公钥的地方
+复制 cat id_rsa.pub 的内容到Github对应的配置SSH公钥的地方
 ssh -T git@github.com
 ```
 
@@ -85,10 +85,12 @@ ssh -T git@github.com
 
 [mac免密ssh登陆配置不坑指南](https://zhuanlan.zhihu.com/p/32279976)
 
+经测试在Centos上可以，但在Ubuntu上有问题，使用上述 powershell 的 scp 方法即可
+
 ```powershell
 ssh-keygen
 ssh-copy-id -i [公钥文件] user@host
-# Mac还需要这一步
+# Mac还需要这一步，最新版 Ventura 不需要
 ssh-add -K [私钥文件] 
 ```
 
@@ -174,18 +176,37 @@ ranger --copy-config=all # Ranger can automatically copy default configuration f
 ### mime ^text,  label editor = ${VISUAL:-$EDITOR} -- "$@"
 mime ^text,  label editor nvim -- "$@"
 mime ^text,  label pager  = "$PAGER" -- "$@"
-### !mime ^text, label editor, ext xml|json|csv|tex|py|pl|rb|js|sh|php = ${VISUAL:-$EDITOR} -- "$@"
+### !mime ^text, label editor, ext xml|json|csv|tex|py|pl|rb|js|sh|php = ${VISUAL:-$} -- "$@"
 !mime ^text, label editor, ext xml|json|csv|tex|py|pl|rb|js|sh|php = nvim -- "$@"
 !mime ^text, label pager,  ext xml|json|csv|tex|py|pl|rb|js|sh|php = "$PAGER" -- "$@"
 ```
 
 ## 常用命令
 
-### 创建目录
+### 查看软件源
+```bash
+sudo vim /etc/apt/sources.list
+```
 
+### 目录、文件
 ```bash
 #  -p 确保目录名称存在，不存在的就建一个
 mkdir -p ~/pod/mysql/conf
+# 新建文件
+touch love.txt
+echo "I love you" > love.txt
+```
+
+### shell相关
+```bash
+# 目前使用的shell
+chsh
+# 展示 /etc/shells 档案内容
+chsh -l
+# 先装个fish
+sudo dnf install fish
+# 通过 -s 参数改变当前的shell
+chsh -s /usr/bin/fish
 ```
 
 ## WSL2

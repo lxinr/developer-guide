@@ -21,17 +21,17 @@
 
   --vp-font-family-base: 'Consolas', 'SourceHanSerifCN', monospace;
   /* ? code 代码块 */
-  --vp-font-family-mono: 'Source Code Pro', 'SourceHanSerifCN', monospace;
+  --vp-font-family-mono: 'SourceCodePro', 'SourceHanSerifCN', monospace;
 }
 
 /* 单个代码块 */
 code {
-  font-family: 'Source Code Pro', 'SourceHanSerifCN', monospace;
+  font-family: 'SourceCodePro', 'SourceHanSerifCN', monospace;
 }
 
 /* 多行代码块 */
 code .line {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'SourceCodePro', monospace;
 }
 
 /* 正文 h1 一般只在顶部写一次 */
@@ -141,6 +141,11 @@ code .line {
 /* a链接 hover时导航线条颜色 */
 .vp-doc a:hover {
   color: #7f493f;
+}
+
+@font-face {
+  font-family: 'SourceCodePro';
+  src: url('/SourceCodePro-Regular.otf')
 }
 
 @font-face {
