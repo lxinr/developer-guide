@@ -183,6 +183,25 @@ mime ^text,  label pager  = "$PAGER" -- "$@"
 
 ## 常用命令
 
+### 新增用户
+```bash
+# 在Ubuntu创建用户，自动创建用户目录 Creating home directory `/home/klaus'
+sudo adduser klaus
+# 添加到sudo组
+sudo usermod -aG sudo klaus
+```
+🔆 要使用ssh免密登录该用户，必须要注意权限问题，如下 
+
+### 权限问题
+```bash
+# 用户权限
+chmod 700 /home/username
+# .ssh文件夹权限
+chmod 700 ~/.ssh/
+# ~/.ssh/authorized_keys 文件权限
+chmod 600 ~/.ssh/authorized_keys
+```
+
 ### 查看软件源
 ```bash
 sudo vim /etc/apt/sources.list

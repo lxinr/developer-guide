@@ -44,7 +44,7 @@ export default defineConfig({
     ],
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2022-present KlausLau'
+      copyright: 'Copyright © 2022-present 刘仁钦'
     },
     editLink: {
       pattern: 'https://github.com/beierzhijin/full-stack-docs/edit/main/docs/:path',
