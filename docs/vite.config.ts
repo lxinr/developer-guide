@@ -21,7 +21,7 @@ var segment = new Segment();
 segment.useDefault();
 
 var options = {
-  placeholder: "刘仁钦祝您兔年大吉！",
+  placeholder: "中国又又又又又赢啦！",
   buttonLabel: "Search",
   previewLength: 10,
   // 采用分词器优化，

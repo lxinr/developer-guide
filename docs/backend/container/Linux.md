@@ -95,7 +95,9 @@ Host hwc
   HostName xxx.xxx.xxx.xx
   User klaus
   IdentityFile ~/.ssh/hwc_win_id_rsa
-  LocalForward localhost:5173 localhost:5173
+  LocalForward 5173 localhost:5173
+  # 将日志级别设置为: QUIET，似乎可以临时解决 channel 3: open failed: connect failed: Connection refused
+  LogLevel QUIET
 
 # gitee
 Host gitee.com
