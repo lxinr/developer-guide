@@ -28,7 +28,8 @@ export default defineConfig({
       '/frontend/': sidebarFrontend(),
       '/backend/': sidebarBackend(),
       '/database/': sidebarDatabase(),
-      '/network/': sidebarNetWork()
+      '/network/': sidebarNetWork(),
+      '/jicao/': sidebarJiCao()
     },
     outline: 'deep', // 右侧大纲标题层级
     // outlineTitle: '本页大纲', // 右侧导航栏顶部文字 customize the title of the right sidebar (on the top of outline links)
@@ -115,6 +116,13 @@ function nav() {
       activeMatch: `^/network/`,
       items: [
         { text: 'Nginx', link: '/network/nginx' },
+      ]
+    },
+    {
+      text: 'JiCao💘6',
+      activeMatch: `^/jicao/`,
+      items: [
+        { text: 'OSS', link: '/jicao/daynight' },
       ]
     }
   ]
@@ -212,6 +220,18 @@ function sidebarNetWork() {
       collapsible: true,
       items: [
         { text: 'nginx', link: '/network/nginx' },
+      ]
+    }
+  ]
+}
+
+function sidebarJiCao() {
+  return [
+    {
+      text: '基操💘六',
+      collapsible: true,
+      items: [
+        { text: 'OSS', link: '/jicao/daynight' },
       ]
     }
   ]

@@ -1,5 +1,52 @@
 # Linux
 
+## 常用命令
+
+### 新增用户
+```bash
+# 在Ubuntu创建用户，自动创建用户目录 Creating home directory `/home/klaus'
+sudo adduser klaus
+# 添加到sudo组
+sudo usermod -aG sudo klaus
+```
+🔆 要使用ssh免密登录该用户，必须要注意权限问题，如下 
+
+### 权限问题
+```bash
+# 用户权限
+chmod 700 /home/username
+# .ssh文件夹权限
+chmod 700 ~/.ssh/
+# ~/.ssh/authorized_keys 文件权限
+chmod 600 ~/.ssh/authorized_keys
+```
+
+### 查看软件源
+```bash
+sudo vim /etc/apt/sources.list
+```
+
+### 目录、文件
+```bash
+#  -p 确保目录名称存在，不存在的就建一个
+mkdir -p ~/pod/mysql/conf
+# 新建文件
+touch love.txt
+echo "I love you" > love.txt
+```
+
+### shell相关
+```bash
+# 目前使用的shell
+chsh
+# 展示 /etc/shells 档案内容
+chsh -l
+# 先装个fish，dnf是centos的包管理工具
+sudo dnf install fish
+# 通过 -s 参数改变当前的shell
+chsh -s /usr/bin/fish
+```
+
 ## SSH免密登录
 
 就是把公钥放在要连接的服务器端，私钥在请求端进行匹配
@@ -179,53 +226,6 @@ mime ^text,  label pager  = "$PAGER" -- "$@"
 ### !mime ^text, label editor, ext xml|json|csv|tex|py|pl|rb|js|sh|php = ${VISUAL:-$} -- "$@"
 !mime ^text, label editor, ext xml|json|csv|tex|py|pl|rb|js|sh|php = nvim -- "$@"
 !mime ^text, label pager,  ext xml|json|csv|tex|py|pl|rb|js|sh|php = "$PAGER" -- "$@"
-```
-
-## 常用命令
-
-### 新增用户
-```bash
-# 在Ubuntu创建用户，自动创建用户目录 Creating home directory `/home/klaus'
-sudo adduser klaus
-# 添加到sudo组
-sudo usermod -aG sudo klaus
-```
-🔆 要使用ssh免密登录该用户，必须要注意权限问题，如下 
-
-### 权限问题
-```bash
-# 用户权限
-chmod 700 /home/username
-# .ssh文件夹权限
-chmod 700 ~/.ssh/
-# ~/.ssh/authorized_keys 文件权限
-chmod 600 ~/.ssh/authorized_keys
-```
-
-### 查看软件源
-```bash
-sudo vim /etc/apt/sources.list
-```
-
-### 目录、文件
-```bash
-#  -p 确保目录名称存在，不存在的就建一个
-mkdir -p ~/pod/mysql/conf
-# 新建文件
-touch love.txt
-echo "I love you" > love.txt
-```
-
-### shell相关
-```bash
-# 目前使用的shell
-chsh
-# 展示 /etc/shells 档案内容
-chsh -l
-# 先装个fish
-sudo dnf install fish
-# 通过 -s 参数改变当前的shell
-chsh -s /usr/bin/fish
 ```
 
 ## WSL2
