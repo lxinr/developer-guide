@@ -28,6 +28,7 @@ const members = [
 <VPTeamMembers size="small" :members="members" />
 
 我爱中国，我们中国真的太厉害啦！
+
 ![image-20230201174747974](https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/image-20230201174747974.png)
 
 <AboutMe />
