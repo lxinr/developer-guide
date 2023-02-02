@@ -47,6 +47,21 @@ sudo dnf install fish
 chsh -s /usr/bin/fish
 ```
 
+### 端口占用
+```bash
+# 查看指定端口占用
+netstat -tunlp |grep  5173
+lsof  -i:5173
+# 查看所有端口占用
+netstat -ntlp
+# 杀死进程
+# | 是管道，将前面的结果作为后面的输入
+# grep 是筛选过滤，找到端口是：5173 的一行
+# awk 是取第七个字段，也就是PID
+netstat -nlp | grep :5173 | awk '{print $7}'
+kill + 得到的PID
+```
+
 ## SSH免密登录
 
 就是把公钥放在要连接的服务器端，私钥在请求端进行匹配
