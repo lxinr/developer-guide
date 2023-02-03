@@ -2,12 +2,18 @@
 
 ## 常用命令
 
-### 新增用户
+### 用户相关
 ```bash
 # 在Ubuntu创建用户，自动创建用户目录 Creating home directory `/home/klaus'
 sudo adduser klaus
-# 添加到sudo组
+# 添加到sudo组，-a|--append 把用户追加到某些组中，仅与-G选项一起使用 
 sudo usermod -aG sudo klaus
+
+# 一行命令创建用户，未测试
+adduser klaus --ingroup sudo
+
+# 切换用户
+su klaus
 ```
 🔆 要使用ssh免密登录该用户，必须要注意权限问题，如下 
 
@@ -21,18 +27,29 @@ chmod 700 ~/.ssh/
 chmod 600 ~/.ssh/authorized_keys
 ```
 
-### 查看软件源
+### 软件相关
 ```bash
-sudo vim /etc/apt/sources.list
+sudo vim /etc/apt/sources.list              # 查看软件源
+sudo apt edit-sources                       # 查看软件源
+sudo apt update                             # 更新软件源
+sudo apt list --upgradable                  # 查看可更新的软件
+sudo select-editor                          # 选择编辑器，键入编辑器对应数字
+sudo apt -y upgrade                         # 更新软件
+sudo apt clean                              # 清理所有软件缓存
+sudo apt autoclean                          # 清理旧版本的软件缓存
+sudo apt autoremove                         # 删除系统不再使用的孤立软件
+sudo apt remove --purge package_name        # 删除软件
 ```
 
-### 目录、文件
+### 目录文件
 ```bash
 #  -p 确保目录名称存在，不存在的就建一个
 mkdir -p ~/pod/mysql/conf
 # 新建文件
 touch love.txt
 echo "I love you" > love.txt
+# 移动文件到某目录
+mv love.txt ~/services/
 ```
 
 ### shell相关
