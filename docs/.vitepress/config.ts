@@ -231,7 +231,7 @@ function sidebarJiCao() {
       text: '基操💘六',
       collapsible: true,
       items: [
-        { text: 'OSS', link: '/jicao/daynight' },
+        { text: '一些反复查的东西', link: '/jicao/daynight' },
       ]
     }
   ]

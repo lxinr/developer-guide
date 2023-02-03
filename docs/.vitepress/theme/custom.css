@@ -4,7 +4,7 @@
    * -------------------------------------------------------------------------- */
 
   /* 控制顶部导航栏 hover 导航线条颜色 */
-  --vp-c-brand-dark: rgba(172, 74, 246, 1);
+  --vp-c-brand-dark: #0086ff;
 
   /* 控制右侧导航栏 a链接 导航线条颜色 */
   --vp-c-brand: #7bc7d1;
@@ -32,6 +32,11 @@ code {
 /* 多行代码块 */
 code .line {
   font-family: 'SourceCodePro', 'SourceHanSerifCN', monospace;
+}
+
+/* 有序列表 */
+.vp-doc ol {
+  padding-left: 2.25rem;
 }
 
 /* 正文 h1 一般只在顶部写一次 */
@@ -140,7 +145,7 @@ code .line {
 
 /* a链接 hover时导航线条颜色 */
 .vp-doc a:hover {
-  color: #7f493f;
+  color: #0086ff;
 }
 
 @font-face {

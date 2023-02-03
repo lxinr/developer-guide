@@ -35,3 +35,14 @@ Please edit config.json at following location
   "picgoPlugins": {}
 }
 ```
+
+## [火狐开发者版切换语言](https://support.mozilla.org/en-US/questions/1223719)
+
+💔开发者版参考Firefox官方更换语言指引不生效
+
+1. 在地址栏输入 about:config
+2. "I accept the risk!"
+3. 搜索框输入 intl.locale.requested
+4. 选择 string（字符串），然后点击右侧➕号
+5. 输入zh-cn，en-us等
+6. 重启浏览器
