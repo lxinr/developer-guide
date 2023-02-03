@@ -75,11 +75,33 @@ https://zhuanlan.zhihu.com/p/431930680
 
 *[浏览器渲染和服务器渲染区别 ](https://www.cnblogs.com/manshufeier/p/9357280.html)
 
-> <strong style="color:orange;">客户端渲染路线：</strong>1.请求一个html ⇢ 2.服务端返回一个html ⇢ 3.浏览器下载html中的js/css文件 ⇢ 4.等待js文件下载完成，加载并初始化完成，可以运行，由js代码向后端请求数据(ajax/fetch) ⇢ 5.等待后端数据返回 ⇢ 6.客户端从无到完整地，把数据渲染为响应页面
+> <strong style="color:orange;">客户端渲染路线：</strong>
+1. 请求一个html
+2. 服务端返回一个html
+3. 浏览器下载html中的js/css文件
+4. 等待js文件下载完成，加载并初始化完成，可以运行，由js代码向后端请求数据(ajax/fetch)
+5. 等待后端数据返回
+6. 客户端从无到完整地，把数据渲染为响应页面
 > 
-> <strong style="color:green;">服务端渲染路线：</strong>1.请求一个html ⇢ 2.服务端请求数据(内网请求快) ⇢ 3. 服务器初始渲染(服务端性能好，较快)，可以理解为组装数据和模板 ⇢ 4.服务端返回已经有正确内容的页面 ⇢ 4.客户端请求js/css文件 ⇢ 5.等待js文件下载完成，加载并初始化完成 ⇢ 6.客户端把剩下一部分渲染完成(内容小，渲染快)
+> <strong style="color:green;">服务端渲染路线：</strong>
+1. 请求一个html
+2. 服务端请求数据(内网请求快)
+3. 服务器初始渲染(服务端性能好，较快)，可以理解为组装数据和模板
+4. 服务端返回已经有正确内容的页面
+5. 客户端请求js/css文件
+6. 等待js文件下载完成，加载并初始化完成
+7. 客户端把剩下一部分渲染完成(内容小，渲染快)
 
 [浏览器DOM渲染及阻塞问题](https://www.cnblogs.com/liuarui/p/11393297.html)
 
 [html，css在浏览器渲染渲染原理 ](https://zhuanlan.zhihu.com/p/93468794)
+
+
+## Deploy
+
+```bash
+# ubuntu install nginx
+sudo apt install -y nginx
+直接在浏览器访问服务器公网ip，如果出现nginx欢迎页面，说明安装成功
+```
 
