@@ -160,7 +160,7 @@ vite项目ts校验会报 <strong style="color:red;">Cannot find name 'ref'</stro
 
 It will automatically turn this
 
-```vue
+```html
 <template>
   <div>
     <HelloWorld msg="Hello Vue 3.0 + Vite" />
@@ -176,7 +176,7 @@ export default {
 
 into this
 
-```vue
+```html
 <template>
   <div>
     <HelloWorld msg="Hello Vue 3.0 + Vite" />

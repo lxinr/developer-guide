@@ -73,7 +73,7 @@ https://zhuanlan.zhihu.com/p/431930680
 ### referrences
 *[浏览器已原生支持ES模块，这对前端开发来说意味着什么？](https://cloud.tencent.com/developer/article/1157519)
 
-*[浏览器渲染和服务器渲染区别 ](https://www.cnblogs.com/manshufeier/p/9357280.html)
+*[浏览器渲染和服务器渲染区别](https://www.cnblogs.com/manshufeier/p/9357280.html)
 
 > <strong style="color:orange;">客户端渲染路线：</strong>
 1. 请求一个html
@@ -92,9 +92,9 @@ https://zhuanlan.zhihu.com/p/431930680
 6. 等待js文件下载完成，加载并初始化完成
 7. 客户端把剩下一部分渲染完成(内容小，渲染快)
 
-[浏览器DOM渲染及阻塞问题](https://www.cnblogs.com/liuarui/p/11393297.html)
+[浏览DOM渲染及阻塞问题](https://www.cnblogs.com/liuarui/p/11393297.html)
 
-[html，css在浏览器渲染渲染原理 ](https://zhuanlan.zhihu.com/p/93468794)
+[html，css在浏览器渲染渲染原理](https://zhuanlan.zhihu.com/p/93468794)
 
 
 ## Deploy

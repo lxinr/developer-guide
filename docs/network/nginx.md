@@ -22,8 +22,10 @@ Nginx启动后，在Linux系统中有两个进程，一个为master，一个为w
 ## 常用命令
 
 ```powershell
-# 检查80端口是否被占用的命令
+# 检查80端口是否被占用的命令，windows
 netstat -ano | findstr 0.0.0.0:80 或 netstat -ano | findstr "80"
+# 检查80端口是否被占用的命令，linux
+netstat -ano | grep 0.0.0.0:80 或 netstat -ano | grep "80"
 
 # windows查看nginx进程
 tasklist /fi  "imagename eq nginx.exe"
@@ -265,6 +267,7 @@ server {
 }
 ```
 
+## Linux配置
 
 
 ## 502 Bad Gateway
