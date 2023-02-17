@@ -268,8 +268,41 @@ server {
 ```
 
 ## Linux配置
+```bash
+# 通过 killall 命令
+sudo killall nginx
+# 通过 pkill 命令，类似于 pgrep + kill
+pkill nginx
+# 通过先查找再 kill 的方式
+ps -ef | grep nginx | grep -v grep | awk '{print $2}' | xargs kill -9
+# 用 cut -c 来截取指定位置的字符串
+ps -ef | grep nginx | grep -v grep | cut -c 11-15 | xargs kill -9
+# 通过 pgrep 指令，根据名字找出所有包含该名字的进程号
+pgrep nginx | xargs kill -9
+# 通过 pidof 指令，根据进程全名找出进程号
+pidof nginx | kill -9
+# 除了管道符的方式，也可以用命令替换，这样就不用通过 xargs 转换参数了
+kill -9 `pgrep nginx`
+```
+
+### 彻底卸载nginx
+```bash
+# 停止nginx
+ps -ef | grep nginx
+kill -QUIT 36398
+# 查看Nginx相关文件：whereis nginx
+whereis nginx
+sudo find / -name nginx
+# 依次删除find查找到的所有目录：
+rm -rf ****
+```
+
+
 
 
 ## 502 Bad Gateway
 
 [How to Solve 502 Bad Gateway Issues? - KeyCDN Support](https://www.keycdn.com/support/502-bad-gateway)
+
+
+

@@ -102,6 +102,7 @@ function nav() {
         },
         { text: 'Linux', link: '/backend/container/Linux' },
         { text: 'Containers', link: '/backend/container/podman' },
+        { text: 'Vim', link: '/backend/container/vim' },
       ]
     },
     {
@@ -116,6 +117,7 @@ function nav() {
       activeMatch: `^/network/`,
       items: [
         { text: 'Nginx', link: '/network/nginx' },
+        { text: 'Caddy2', link: '/network/caddy2' },
       ]
     },
     {
@@ -219,7 +221,8 @@ function sidebarNetWork() {
       text: 'Network',
       collapsible: true,
       items: [
-        { text: 'nginx', link: '/network/nginx' },
+        { text: 'Nginx', link: '/network/nginx' },
+        { text: 'Caddy2', link: '/network/caddy2' },
       ]
     }
   ]

@@ -39,6 +39,9 @@ sudo apt clean                              # 清理所有软件缓存
 sudo apt autoclean                          # 清理旧版本的软件缓存
 sudo apt autoremove                         # 删除系统不再使用的孤立软件
 sudo apt remove --purge package_name        # 删除软件
+whereis ****                                # 查找软件安装位置
+sudo find / -name ****                      # 查找文件
+rm -rf ****                                 # 依次删除find查找到的所有目录：
 ```
 
 ### 目录文件
@@ -67,7 +70,7 @@ chsh -s /usr/bin/fish
 ### 端口占用
 ```bash
 # 查看指定端口占用
-netstat -tunlp |grep  5173
+sudo netstat -tunlp |grep 5173
 lsof  -i:5173
 # 查看所有端口占用
 netstat -ntlp
@@ -77,6 +80,8 @@ netstat -ntlp
 # awk 是取第七个字段，也就是PID
 netstat -nlp | grep :5173 | awk '{print $7}'
 kill + 得到的PID
+# 查看某进程端口占用，例Tomcat
+ps -ef |grep tomcat
 ```
 
 ## SSH免密登录

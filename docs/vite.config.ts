@@ -21,7 +21,7 @@ var segment = new Segment();
 segment.useDefault();
 
 var options = {
-  placeholder: "中国又又又又又赢啦！",
+  placeholder: "输入关键字搜索",
   buttonLabel: "Search",
   previewLength: 10,
   // 采用分词器优化，
