@@ -11,6 +11,12 @@ titleTemplate: 包管理
 
 pnpm和npm用的同一个配置文件.npmrc，https://pnpm.io/cli/config
 
+## 版本号`~`和`^`的区别
++ `~`会匹配最近的小版本依赖包，比如~1.2.3会匹配所有1.2.x版本，但是不包括1.3.0
++ `^`会匹配最新的大版本依赖包，比如^1.2.3会匹配所有1.x.x的包，包括1.3.0，但是不包括2.0.0
+
+建议使用`~`来标记版本号，这样可以保证项目不会出现大的问题，也能保证包中的小bug可以得到修复
+
 ## fnm
 
 > Fast Node Manager , [Fast and simple Node.js version manager, built in Rust](https://github.com/Schniz/fnm)
