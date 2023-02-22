@@ -258,6 +258,16 @@ npm install --save [moduleName] # 项目下安装，并在package文件的depend
 npm install --save-dev [moduleName] # 项目下安装，并在package文件的devDependencies节点写入依赖，仅开发环境需要 -D
 ```
 
+## npx
+npx 是 npm5.2.0版本新增的一个工具包，定义为npm包的执行者，相比 npm，npx 会自动安装依赖包并执行某个命令，npm自带npx
+
+npx 会在当前目录下的./node_modules/.bin里去查找是否有可执行的命令，没有找到的话再从全局里查找是否有安装对应的模块，全局也没有的话就会自动下载对应的模块，如上面的 create-react-app，npx 会将 create-react-app 下载到一个临时目录，用完即删，不会占用本地资源
+
+```bash
+npx [moduleName] # 会自动安装依赖包并执行某个命令
+npx --no-install [moduleName] # --no-install 告诉npx不要自动下载，也就意味着如果本地没有该模块则无法执行后续的命令
+```
+
 ## yarn
 
 最新的yarn的安装方式已经变了，基于的 `nodejs >= 16.10` 自带的corepack，详见♾️ [Installation | Yarn - Package Manager (yarnpkg.com)](https://yarnpkg.com/getting-started/install)
