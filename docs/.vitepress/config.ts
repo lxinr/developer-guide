@@ -157,6 +157,7 @@ function sidebarFrontend() {
       items: [
         { text: 'vue', link: '/frontend/vue/vuejs' },
         { text: 'react', link: '/frontend/react/reactjs' },
+        { text: 'jsx', link: '/frontend/react/jsx' },
         { text: 'soildjs', link: '/frontend/solid/solidjs' }
       ]
     },
