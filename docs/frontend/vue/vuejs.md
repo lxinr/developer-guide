@@ -15,7 +15,55 @@ const members = [
 
 <VPTeamMembers size="small" :members="members" />
 
-## [Vite](https://cn.vitejs.dev/)
+## [Vue2](https://github.com/vuejs/vue/blob/main/CHANGELOG.md)
+
+## [Vue CLI](https://github.com/vuejs/vue-cli/releases)
+
+### babelrc <strong style="color:orange;">vs</strong> babel.config.js
+
+babelrc 只会影响本项目中的代码，babel.config.js会影响整个项目中的代码，包含node_modules中的代码，<strong style="color:orange;">推荐使用 babel.config.js</strong>
+
+#### babelrc
+```json
+{
+    "plugins": [
+        [
+            "@ks/babel-plugin-component",
+            {
+                "libraryName": "@ks/sharp-ui",
+                "styleLibrary": {
+                    "base": false,
+                    "name": "themes/default",
+                    "path": "[module].css"
+                }
+            }
+        ]
+    ]
+}
+```
+
+#### babel.config.js
+```javascript
+module.exports={
+    "plugins": [
+        [
+            "@ks/babel-plugin-component",
+            {
+                "libraryName": "@ks/sharp-ui",
+                "styleLibrary": {
+                    "base": false,
+                    "name": "themes/default",
+                    "path": "[module].css"
+                }
+            }
+        ]
+    ]
+}
+```
+
+## [Vue3](https://vuejs.org)
+
+## [Vite](https://cn.vitejs.dev)
 
 ### sass
 
@@ -209,8 +257,6 @@ export default defineConfig({
   ]
 })
 ```
-
-## [Vue](https://vuejs.org/)
 
 ## [Vue Router](https://router.vuejs.org/)
 
