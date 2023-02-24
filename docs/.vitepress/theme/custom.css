@@ -18,6 +18,7 @@
   --vp-button-brand-hover-border: rgba(172, 74, 246, 1);
   --vp-button-brand-bg: rgba(172, 74, 246, 0.76);
   --vp-button-brand-hover-bg: rgba(172, 74, 246, 1);
+  --vp-button-brand-active-bg: rgba(140, 114, 255, 1);
 
   --vp-font-family-base: 'Consolas', 'SourceHanSerifCN', monospace;
   /* ? code 代码块 */
