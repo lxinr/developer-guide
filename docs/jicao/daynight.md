@@ -16,25 +16,40 @@ Please edit config.json at following location
 ```
 
 ```json
-# area（区域查询）https://help.aliyun.com/document_detail/31837.html
+# area（阿里云区域查询）https://help.aliyun.com/document_detail/31837.html
+# area（七牛区域查询）https://developer.qiniu.com/kodo/1671/region-endpoint-fq
 {
-  "picBed": {
-    "current": "aliyun",
-    "aliyun": {
-      "accessKeyId": "**************************",
-      "accessKeySecret": "**************************",
-      "bucket": "ulooklikeamovie",
-      "area": "oss-cn-beijing",
-      "path": "img/",
-      "customUrl": "",
-      "options": ""
+    "picBed": {
+        "current": "qiniu",
+        "aliyun": {
+            "accessKeyId": "**************",
+            "accessKeySecret": "**************",
+            "bucket": "ulooklikeamovie",
+            "area": "oss-cn-beijing",
+            "path": "img/",
+            "customUrl": "",
+            "options": ""
+        },
+        "uploader": "qiniu",
+        "transformer": "path",
+        "qiniu": {
+            "accessKey": "**************",
+            "secretKey": "**************",
+            "bucket": "chinatelecom",
+            "url": "qiniu.viphimself.vip",
+            "area": "z0",
+            "options": "",
+            "path": ""
+        }
     },
-    "uploader": "aliyun",
-    "transformer": "path"
-  },
-  "picgoPlugins": {}
+    "picgoPlugins": {}
 }
 ```
+
+### issues
+
+🔺[picgo + 七牛云`华东-浙江2`无法上传图片](https://github.com/Molunerfinn/PicGo/issues/365#issuecomment-1380207705)
+
 
 ## [火狐开发者版切换语言](https://support.mozilla.org/en-US/questions/1223719)
 
