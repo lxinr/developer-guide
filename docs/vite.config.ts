@@ -25,18 +25,20 @@ var options = {
   buttonLabel: "Search",
   previewLength: 10,
   // 采用分词器优化，
-  encode: function (str) {
-    return segment.doSegment(str, { simple: true });
-  },
-  tokenize: "forward", // 解决汉字搜索问题。来源：https://github.com/emersonbottero/vitepress-plugin-search/issues/11
+  // encode: function (str) {
+  //   return segment.doSegment(str, { simple: true });
+  // },
+  // tokenize: "forward", // 解决汉字搜索问题。来源：https://github.com/emersonbottero/vitepress-plugin-search/issues/11
+  encode: false,
+  tokenize: "full",
 }
 
 export default defineConfig({
   plugins: [SearchPlugin(options)],
-  // server: {
-  //   fs: {
-  //     // Allow serving files from one level up to the project root
-  //     allow: ["../.."],
-  //   },
-  // },
+  server: {
+    fs: {
+      // Allow serving files from one level up to the project root
+      allow: ["../.."],
+    },
+  },
 });
