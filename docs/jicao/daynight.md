@@ -61,3 +61,7 @@ Please edit config.json at following location
 4. 选择 string（字符串），然后点击右侧➕号
 5. 输入zh-cn，en-us等
 6. 重启浏览器
+
+## PowerToys
+
+![image-20230308170748337](https://ulooklikeamovie.oss-cn-beijing.aliyuncs.com/img/image-20230308170748337.png){width="555px"}
