@@ -2,6 +2,12 @@
 
 ## 常用命令
 
+### 系统相关
+```bash
+# 查看centos版本
+cat /etc/redhat-release
+```
+
 ### 用户相关
 ```bash
 # 在Ubuntu创建用户，自动创建用户目录 Creating home directory `/home/klaus'
