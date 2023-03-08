@@ -31,7 +31,7 @@ var options = {
   // },
   // tokenize: "forward", // 解决汉字搜索问题。来源：https://github.com/emersonbottero/vitepress-plugin-search/issues/11
   encode: false,
-  tokenize: "full",
+  tokenize: "full", // 使用这种配置，不会出现线上base路径丢失导致404的问题
 }
 
 export default defineConfig({
