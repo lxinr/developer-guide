@@ -17,6 +17,7 @@
     "markdown-it-footnote": "^3.0.3"
   },
   "devDependencies": {
+    "@pzy915/vitepress-plugin-search": "1.0.4-alpha.19-3",
     "flexsearch": "^0.7.31",
     "markdown-it": "^13.0.1",
     "sass": "^1.53.0",

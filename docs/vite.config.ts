@@ -1,6 +1,7 @@
 //vite.config.ts
-import { defineConfig } from "vite";
-import { SearchPlugin } from "vitepress-plugin-search";
+import { defineConfig } from "vite"
+// import { SearchPlugin } from "vitepress-plugin-search"
+import { SearchPlugin } from '@pzy915/vitepress-plugin-search'
 
 
 /**
