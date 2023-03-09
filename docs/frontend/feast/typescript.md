@@ -1,6 +1,7 @@
 ---
 title: TypeScript
 titleTemplate: 语法
+outline: deep
 ---
 
 # TypeScript
@@ -162,7 +163,8 @@ let lines: number = 42
 let name: string = 'Anders'
 ```
 
-### any类型
+### any类型 vs unknown类型
+> https://www.c-sharpcorner.com/article/typescript-any-vs-unknown https://zhuanlan.zhihu.com/p/104296850
 
 ```ts
 // 不知道什么类型用 "any" 类型
