@@ -9,6 +9,7 @@
   /* 控制右侧导航栏 a链接 导航线条颜色 */
   --vp-c-brand: #7bc7d1;
 
+
   /**
    * Component: Home
    * -------------------------------------------------------------------------- */
@@ -33,6 +34,20 @@ code {
 /* 多行代码块 */
 code .line {
   font-family: 'SourceCodePro', 'SourceHanSerifCN', monospace;
+}
+
+
+.VPDocAsideOutline .content {
+  border-left: unset !important;
+}
+
+/* 右侧导航栏 */
+.VPDocAsideOutline .content .outline-marker {
+  width: 4px !important;
+  height: 20px !important;
+  background-color: #7ed0fb !important;
+  border-radius: 4px !important;
+  left: 3px !important;
 }
 
 /* 有序列表 */
