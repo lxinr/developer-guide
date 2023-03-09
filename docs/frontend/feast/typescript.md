@@ -3,16 +3,16 @@ title: TypeScript
 titleTemplate: 语法
 ---
 
-# JavaScript
+# TypeScript
 
-## JavaScript is loosely typed
+## JavaScript
+
+### JavaScript is loosely typed
 
 ```javascript
 let amount = 10
 amount = "Eight"
 ```
-
-## JavaScript
 
 ### modules
 
@@ -373,6 +373,28 @@ let pairToTuple = function <T>(p: Pair<T>) {
 }
 let tuple = pairToTuple({ item1: 'hello', item2: 'world' })
 ```
+
+## 类型断言[as语法 | <>语法]
+> https://blog.csdn.net/s_y_w123/article/details/107633405
+
+## type关键字
+> https://juejin.cn/post/7063521133340917773
+
+## 特殊符号 `?.` `??` `?:` `|`
+> https://www.jianshu.com/p/f522f0969956 https://blog.csdn.net/weixin_44682587/article/details/123212514
+
+
+`?. 可选链（Optional Chaining）`
+
+`?: 可选参数`
+
+`?? 空值合并运算符`
+
+`!. 非空断言操作符`
+> 和?.相反，!.表示对象后面的属性一定不是null或undefined
+
+`| 联合类型`
+
 
 ## 引用定义文件
 
