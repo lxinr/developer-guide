@@ -164,7 +164,7 @@ let name: string = 'Anders'
 ```
 
 ### any类型 vs unknown类型
-> https://www.c-sharpcorner.com/article/typescript-any-vs-unknown https://zhuanlan.zhihu.com/p/104296850
+> https://www.c-sharpcorner.com/article/typescript-any-vs-unknown https://zhuanlan.zhihu.com/p/104296850 https://www.jianshu.com/p/516fe7cbc9e8
 
 ```ts
 // 不知道什么类型用 "any" 类型
