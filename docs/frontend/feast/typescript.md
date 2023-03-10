@@ -385,20 +385,21 @@ let pairToTuple = function <T>(p: Pair<T>) {
 let tuple = pairToTuple({ item1: 'hello', item2: 'world' })
 ```
 
-## 特殊符号 `?.` `??` `?:` `|`
-> https://www.jianshu.com/p/f522f0969956 https://blog.csdn.net/weixin_44682587/article/details/123212514
+## 特殊符号
+> https://www.jianshu.com/p/f522f0969956 https://blog.csdn.net/weixin_44682587/article/details/123212514 https://juejin.cn/post/6965786378680401956
 
+### ?. 可选链（Optional Chaining）
 
-`?. 可选链（Optional Chaining）`
+### ?? 空值合并运算符
 
-`?: 可选参数`
+### ?: 可选参数
 
-`?? 空值合并运算符`
+### | 联合类型
 
-`!. 非空断言操作符`
+### & 类型合并运算符
+
+### !. 非空断言操作符
 > 和?.相反，!.表示对象后面的属性一定不是null或undefined
-
-`| 联合类型`
 
 
 ## 引用定义文件
