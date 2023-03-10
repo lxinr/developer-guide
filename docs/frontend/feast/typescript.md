@@ -173,6 +173,15 @@ notSure = '可以重新赋值，转换为字符串类型'
 notSure = false // 亦可，重新赋值为布尔类型
 ```
 
+### 类型断言[as语法 | <>语法]
+> https://blog.csdn.net/s_y_w123/article/details/107633405
+
+### type关键字
+> https://juejin.cn/post/7063521133340917773
+
+### Omit辅助类型
+> https://zhuanlan.zhihu.com/p/397398407
+
 ### const关键字
 
 ```ts
@@ -375,12 +384,6 @@ let pairToTuple = function <T>(p: Pair<T>) {
 }
 let tuple = pairToTuple({ item1: 'hello', item2: 'world' })
 ```
-
-## 类型断言[as语法 | <>语法]
-> https://blog.csdn.net/s_y_w123/article/details/107633405
-
-## type关键字
-> https://juejin.cn/post/7063521133340917773
 
 ## 特殊符号 `?.` `??` `?:` `|`
 > https://www.jianshu.com/p/f522f0969956 https://blog.csdn.net/weixin_44682587/article/details/123212514
